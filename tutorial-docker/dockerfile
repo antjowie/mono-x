@@ -6,4 +6,4 @@ RUN yarn install --production
 EXPOSE 3000
 # RUN chown -R node /app
 # USER node
-CMD ["node", "src/index.js"]
+CMD ["node", "--inspect=0.0.0.0:9229", "--nolazy", "src/index.js"]
