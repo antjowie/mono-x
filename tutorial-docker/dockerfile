@@ -1,0 +1,9 @@
+FROM node:lts-alpine
+ENV NODE_ENV=production
+WORKDIR /app
+COPY . .
+RUN yarn install --production
+EXPOSE 3000
+# RUN chown -R node /app
+# USER node
+CMD ["node", "src/index.js"]
