@@ -1,0 +1,64 @@
+[gd_scene load_steps=5 format=3 uid="uid://d10iwwijoa1lx"]
+
+[ext_resource type="FontFile" uid="uid://deiapa271gajp" path="res://first_2d_game/fonts/Xolonium-Regular.ttf" id="1_nuwkr"]
+[ext_resource type="Script" path="res://first_2d_game/hud.gd" id="1_o4m4q"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_snl7a"]
+action = &"start_game"
+
+[sub_resource type="Shortcut" id="Shortcut_1774i"]
+events = [SubResource("InputEventAction_snl7a")]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_o4m4q")
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 40.0
+offset_bottom = 121.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_nuwkr")
+theme_override_font_sizes/font_size = 64
+text = "999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Message" type="Label" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nuwkr")
+theme_override_font_sizes/font_size = 60
+text = "Dodge the creeps!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 112.0
+offset_top = -256.0
+offset_right = -112.0
+offset_bottom = -176.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_nuwkr")
+theme_override_font_sizes/font_size = 60
+shortcut = SubResource("Shortcut_1774i")
+text = "Start"
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
