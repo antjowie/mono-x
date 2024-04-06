@@ -1,7 +1,10 @@
 {
   "folders": [
     {
-      "path": "tutorial-docker"
+      "path": "rename"
+    },
+    {
+      "path": "statistics"
     }
   ]
 }
