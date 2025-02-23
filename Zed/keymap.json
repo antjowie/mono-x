@@ -1,0 +1,48 @@
+// Zed keymap
+
+//
+
+// For information on binding keys, see the Zed
+
+// documentation: https://zed.dev/docs/key-bindings
+
+//
+
+// To see the default key bindings run `zed: open default keymap`
+
+// from the command palette.
+
+[
+  {
+    "context": "Workspace",
+
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+
+  {
+    "context": "Editor",
+
+    "bindings": {
+      "ctrl-shift-d": "diagnostics::Deploy",
+      "ctrl-shift-enter": "editor::NewlineAbove",
+      "ctrl-alt-enter": "editor::NewlineBelow",
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePrevItem",
+      "alt-left": "pane::GoBack",
+      "alt-right": "pane::GoForward",
+      "ctrl-alt-right": "workspace::ActivateNextPane",
+      "ctrl-alt-left": "workspace::ActivatePreviousPane",
+      "ctrl-;": "editor::ToggleInlayHints",
+      "ctrl-1": ["workspace::ActivatePane", 0],
+      "ctrl-2": ["workspace::ActivatePane", 1],
+      "ctrl-3": ["workspace::ActivatePane", 2],
+      "ctrl-4": ["workspace::ActivatePane", 3],
+      "ctrl-k": "editor::Hover",
+      "alt-z": "editor::ToggleSoftWrap"
+
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  }
+]
