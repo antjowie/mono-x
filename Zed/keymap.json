@@ -25,6 +25,7 @@
     "context": "Editor",
 
     "bindings": {
+      "ctrl-shift-\\": "editor::MoveToEnclosingBracket",
       "ctrl-shift-d": "diagnostics::Deploy",
       "ctrl-shift-enter": "editor::NewlineAbove",
       "ctrl-alt-enter": "editor::NewlineBelow",
@@ -40,7 +41,9 @@
       "ctrl-3": ["workspace::ActivatePane", 2],
       "ctrl-4": ["workspace::ActivatePane", 3],
       "ctrl-k": "editor::Hover",
-      "alt-z": "editor::ToggleSoftWrap"
+      "alt-z": "editor::ToggleSoftWrap",
+      "ctrl-shift-[": "editor::Fold",
+      "ctrl-shift-]": "editor::UnfoldLines"
 
       // "j k": ["workspace::SendKeystrokes", "escape"]
     }

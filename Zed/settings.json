@@ -15,6 +15,12 @@
     },
     "version": "2"
   },
+  "inlay_hints": {
+    "toggle_on_modifiers_press": {
+      "control": true,
+      "alt": true
+    }
+  },
   "features": {
     "edit_prediction_provider": "zed"
   },
@@ -30,7 +36,7 @@
   },
   "soft_wrap": "preferred_line_length",
   "preferred_line_length": 120,
-  "restore_on_startup": "none",
+  // "restore_on_startup": "none",
   "auto_signature_help": true,
   "show_diagnostics": "all",
   "diagnostics": {
